@@ -1,1 +1,1 @@
-web: gunicorn autotranslator.wsgi --log-file=-
+web: gunicorn autotranslator.wsgi:application --log-file -
