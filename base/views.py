@@ -13,7 +13,7 @@ def authView(request):
   form = UserCreationForm(request.POST or None)
   if form.is_valid():
    form.save()
-   return redirect("loginNregister:login")
+   return redirect("base:login")
  else:
   form = UserCreationForm()
  return render(request, "registration/signup.html", {"form": form})

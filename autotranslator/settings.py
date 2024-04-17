@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'loginNregister',
+    'base',
 ]
 
 MIDDLEWARE = [
@@ -137,5 +137,5 @@ django_heroku.settings(locals())
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-LOGIN_REDIRECT_URL = "loginNregister:home"
-LOGOUT_REDIRECT_URL = "loginNregister:login"
+LOGIN_REDIRECT_URL = "base:home"
+LOGOUT_REDIRECT_URL = "base:login"
