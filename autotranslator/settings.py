@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'base',
+    'videoconference_app',
 ]
 
 MIDDLEWARE = [
@@ -140,5 +141,5 @@ django_heroku.settings(locals())
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-LOGIN_REDIRECT_URL = "base:home"
-LOGOUT_REDIRECT_URL = "base:login"
+# LOGIN_REDIRECT_URL = "base:home"
+# LOGOUT_REDIRECT_URL = "base:login"

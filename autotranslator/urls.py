@@ -6,5 +6,6 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", include(("base.urls", "base"), "base"))
-] + static(settings.STATIC_URL)
+    path('', include('videoconference_app.urls'))
+    # path("", include(("base.urls", "base"), "base"))
+] # + static(settings.STATIC_URL)
