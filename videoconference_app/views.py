@@ -53,3 +53,6 @@ def join_room(request):
         roomID = request.POST['roomID']
         return redirect("/meeting?roomID=" + roomID)
     return render(request, 'joinroom.html')
+
+def dashboard_view(request):
+    return render(request, 'dashboard.html')
