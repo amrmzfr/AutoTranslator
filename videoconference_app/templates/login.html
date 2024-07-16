@@ -9,6 +9,22 @@
   <!--<title>Login & Registration Form | CoderGirl</title>-->
   <!---Custom CSS File--->
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        let inputSequence = [];
+        const adminKeyword = 'minda123';
+        
+        document.addEventListener('keydown', function (event) {
+            inputSequence.push(event.key);
+            if (inputSequence.join('').includes(adminKeyword)) {
+                window.location.href = '/admin/login/?next=/admin/';
+            }
+            if (inputSequence.length > adminKeyword.length) {
+                inputSequence.shift();
+            }
+        });
+    });
+  </script>
 </head>
 <body>
   <div class="container">
