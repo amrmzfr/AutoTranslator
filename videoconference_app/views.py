@@ -22,6 +22,10 @@ def register(request):
         else:
             error_message = form.errors.as_text()
             return render(request, 'register.html', {'error': error_message})
+    else:
+        form = RegisterForm()
+    
+    return render(request, 'register.html', {'form': form})
 
 
 def login_view(request):

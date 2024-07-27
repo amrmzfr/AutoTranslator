@@ -1,74 +1,197 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 *{
- padding: 0;
- margin: 0;
- box-sizing: border-box;
- font-family: 'Mulish', sans-serif;
- transition: 0.3s all ease-in-out;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
-body{
-display: flex;
-justify-content: center;
-align-items: center;
-height: 100vh;
-background-color: #fff;
+body {
+  min-height: 100vh;
+  width: 100%;
+  background: #f7f7f7 url("/static/css/image/background.gif") no-repeat center center fixed;
+  background-size: cover; /* Ensures the background covers the whole area */
 }
-.shadow-wrap{
- border-radius: 5px;
- padding: 25px;
- background-color:#F0F2FB;
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    max-width: 430px;
+    width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
-.form-wrap{
- background-color: #fff;
-padding: 70px;
-}
-.form-wrap form *{
- display: block;
- width: 100%;
-}
-.form-wrap form label{
-margin-bottom: 5px;
-font-size: 14px;
-font-weight: 700;
-line-height: 26px; 
-}
-.form-wrap form input{
-padding: 12px 20px;
-border-radius: 5px;
-border: 1px solid #DAE1F5;
-background: #FFF; 
-color: #545D7A; 
-}
-#id_username{
- margin-bottom: 20px;
-}
-.form-wrap button{
- border-radius: 5px;
-background: #10182F;
-color: #FFF;
-cursor: pointer;
-text-align: center;
-font-size: 16px;
-padding: 12px 68px;
-font-weight: 700;
-border: 1px solid transparent;
-margin-top: 30px;
-line-height: 26px; 
-}
-.signup-link{
- color: #10182F;
- font-size: 15px;
- margin-top: 20px;
- text-align: center;
- line-height: 25px;
- display: block;
-text-decoration: none;
-}
-.signup-link:hover{
- text-decoration: underline;
-}
-.form-wrap button:hover{
- background-color: #fff;
- color: #10182F;
- border-color: #10182F;
 
+.container .form{
+    padding: 2rem;
+}
+.form header{
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+ .form input{
+    height: 50px;
+    width: 100%;
+    padding: 0 15px;
+    font-size: 16px;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+ }
+ .form input:focus{
+    border-color: #007BFF;
+ }
+.form a{
+    font-size: 16px;
+    color: #009579;
+    text-decoration: none;
+}
+.form a:hover{
+  text-decoration: underline;
+}
+.form input.button{
+    color: #fff;
+    background: #007BFF;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 15px;
+}
+.form input.button:hover{
+    background: #0056b3;
+}
+.signup{
+  font-size: 14px;
+  text-align: center;
+  margin-top: 10px;
+}
+.signup label{
+  color: #007BFF;
+  cursor: pointer;
+}
+.signup label:hover{
+  text-decoration: underline;
+}
+
+
+.intro {
+  margin: auto;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+
+.intro {
+  margin: auto;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+.intro h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+}
+.intro h2 {
+  font-size: 1.5rem;
+  color: #666;
+}
+
+/* vertically align the div with class name intro to the center of the page */
+.intro {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* make the buttons inside the div with class name intro look attractive */
+.intro a {
+  background-color: #007BFF;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 0;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* center the buttons inside the div with class name intro */
+.intro a {
+  margin-top: 7px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+/* make the buttons inside the div with class name intro look attractive when hovered */
+.intro a:hover {
+    background-color: #0056b3;
+}
+
+/* center the div named dashboard */
+.dashboard {
+    margin: auto;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+/** align the text inside the div named dashboard to the center */
+.dashboard h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.dashboard a {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.dashboard a {
+    background-color: #007BFF;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.dashboard a:hover {
+  background-color: #0056b3;
+}
+
+.dashboard {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
